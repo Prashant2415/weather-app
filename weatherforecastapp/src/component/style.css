@@ -51,7 +51,13 @@
     padding: 0rem 1rem 0rem 1rem;
     font-weight: 700;
     height: 35px;
+    cursor: pointer;
 }
+.search-button:hover {
+    background: #000000;
+    color: #ffffff;
+}
+
 .glassmorphic-container{
     width: 65rem;
     height: 35rem;
@@ -71,13 +77,13 @@
 .temperature-glass-container{
     width: 100%;
     background: rgba(16, 21, 82, 0.597);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(1px);
     height: 100%;
     border-radius: 1rem;
 }
 .location-name{
     display: flex;
-    margin: 2rem;
+    margin: 2rem 2rem 0rem 2rem;
     padding-top: 2rem;
 }
 .location-name-icon{
@@ -92,10 +98,13 @@
     font-weight: 300;
     color: #ffffff;
 }
+.region-title{
+    font-size: 1rem;
+}
 .temperature-display{
     width: 100%;
     height: 8rem;
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
 }
@@ -104,5 +113,48 @@
     font-family: monospace;
     color: #ffffff;
     font-weight: 200;
-    margin-top: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+.condition-text{
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    font-family: monospace;
+}
+.outer-side-div{
+    width: 25rem;
+    height: 11rem;
+    margin: 0rem 0rem 0rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+}
+.sides-container{
+    width: 100%;
+    height: 5rem;
+    background-image: url("../../public/images/rain.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 2rem;
+}
+.side-glass-container{
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.63);
+    backdrop-filter: blur(0px);
+    border-radius: 1rem;
+    display: inline-grid;
+    justify-items: center;
+}
+.side-value-tag{
+    display: flex;
+    margin: 0.5rem 0rem 0rem 0rem;
+    font-size: 1.5rem;
+}
+.side-p-tag{
+    margin: 0rem 0rem 0rem 0rem;
+    color: lightsteelblue;
 }
