@@ -1,0 +1,2 @@
+Weather Forecast API key = 1a25fc9d04654f98a1f63237242209
+Get details of India = http://api.weatherapi.com/v1/current.json?key=c3539e73591240b0ae063419242209&q=India&aqi=no
