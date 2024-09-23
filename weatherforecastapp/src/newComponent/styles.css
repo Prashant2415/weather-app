@@ -1,0 +1,79 @@
+.weather-container{
+    margin: 2rem;
+    display: flex;
+    gap: 2rem;
+}
+.menu-container{
+    width: 5rem;
+    background: rgb(32, 43, 59);
+    height: auto;
+    border-radius: 1rem;
+}
+.main-container{
+    width: 45rem;
+    /* background: red; */
+    border-radius: 1rem;
+}
+.inner-main-container{
+    margin: 1rem;
+}
+.search-container{
+    width: 41rem;
+    height: 2rem;
+    display: flex;
+    gap: 1rem;
+}
+.input-search{
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    padding: 0rem 0rem 0rem 1rem;
+    background: rgb(32, 43, 59);
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 1.5rem;
+    border-style: solid;
+    outline: none;
+}
+.search-button{
+    width: 6rem;
+    border-radius: 1rem;
+    font-weight: 700;
+    background: rgb(32, 43, 59);
+    color: #ffffff;
+    border-style: initial;
+    outline: none;
+    font-size: 16px;
+}
+.city-name-temp-icon-container{
+    margin: 2rem;
+}
+.city-name-temp{
+    /* display: flex;
+    gap: 1rem; */
+    width: 22rem;
+    /* background: darkolivegreen; */
+}
+.city-name{
+    margin: 0;
+}
+.city-state{
+    display: flex;
+    align-items: end;
+    margin-bottom: 2rem;
+}
+.city-temp{
+    font-size: 5rem;
+    margin: 0;
+    font-weight: 700;
+}
+.city-text{
+    margin: 0;
+    font-size: 2rem;
+}
+.icon{
+
+}
+.current-update-container{
+
+}

@@ -1,11 +1,11 @@
 import './App.css';
-import WeatherHome from './component/WeatherHome';
 import { weatherStatus } from './component/utility';
+import WeatherTemplate from './newComponent/WeatherTemplate';
 function App() {
   localStorage.setItem("weatherStatusMessage", JSON.stringify(weatherStatus));
   return (
-    <div className='app-container'>
-      <WeatherHome/>
+    <div>
+      <WeatherTemplate/>
     </div>
   );
 }
