@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import "../newComponent/styles.css";
 import axios from "axios";
+import ConvertTemperature from './ConvertTemperature';
 const WeatherTemplate = () => {
     const [data, setData] = useState({});
     const [city, setCity] = useState("");
@@ -10,13 +11,14 @@ const WeatherTemplate = () => {
     const apiKey = "61689bcee9c82e9ef943f208bddd3aea";
     const handleTodayForecast = async(lat, lon)=>{
         let forecast = await axios.get(`http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}`).then((response)=>{
-            const targetDate = response.data.list[0].dt_txt.split(' ')[0];
+            //const targetDate = response.data.list[0].dt_txt.split(' ')[0];
+             const targetDate = "2024-09-25";
             const filteredData = response.data.list.filter(entry => entry.dt_txt.split(' ')[0] === targetDate);
             setList(filteredData);
         })
         .catch((error)=>{console.log(error)})
     }
-   
+   console.log(list)
     const getWeatherAPI = async (value = "Jabalpur") => {
         //GET API to get city details from weatherapi site
         const response = await axios.get(`http://api.weatherapi.com/v1/current.json?key=c3539e73591240b0ae063419242209&q=${value}`).then((response) => {
@@ -216,24 +218,9 @@ const WeatherTemplate = () => {
 
                 </div>
             </div>
+            
             <div className='weekday-forecast-container'>
-                <div className='weekday-container-align'>
-                <div className='inner-weekday-forecast-container'>
-                    <p className='weekday-container-title'>7 days Forecast</p>
-                </div>
-                <div className='weekdays-container'>
-                {weekDays.map((wd) => {
-                                return (
-                                    <div className='inner-container-wd'>
-                                        <span className='wd-span-tag'>{wd.title}</span>
-                                        <img className='wd-img-tag' src={`https:${icon}`} />
-                                        <p className='wd-value'>{wd.value}</p>
-                                    </div>
-                                )
-                            })}
-                </div>
-                </div>
-
+            <ConvertTemperature/>
             </div>
         </div>
     )

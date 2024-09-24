@@ -10,7 +10,7 @@
     border-radius: 1rem;
 }
 .main-container{
-    width: 45rem;
+    width: 50rem;
     /* background: red; */
     border-radius: 1rem;
 }
@@ -109,10 +109,11 @@
     font-weight: 500;
 }
 .todays-forecast-container{
-    width: 65rem;
+    max-width: 50rem;
     background: rgb(32, 43, 59);
     height: 13rem;
     border-radius: 1rem;
+    width: fit-content;
 }
 .todays-forecast{
     display: flex;
@@ -127,7 +128,9 @@
     margin: 0rem 2rem;
 }
 .inner-container-tf{
-
+    display: grid;
+    grid-template-columns: 5.5rem;
+    justify-items: center;
 }
 .tf-span-tag{
     font-size: 20px;
@@ -141,35 +144,48 @@
 }
 .weekday-forecast-container{
     width: 30rem;
-    background: rgb(32, 43, 59);
     border-radius: 1rem;
-    height: 41rem;
 }
-.weekday-container-align{
+
+.temperature-main-div{
+    background-color: rgb(32, 43, 59);
+    border-radius: 1rem;
 }
-.inner-weekday-forecast-container{
+.temperature-inner-div{
     margin: 2rem;
 }
-.weekday-container-title{
-    font-size: 26px;
-}
-.weekdays-container{
-    margin: 2rem;
-}
-.inner-container-wd{
-    display: flex;
-    gap: 5rem;
-}
-.wd-span-tag{
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    width: 5rem;
-}
-.wd-img-tag{
+.temperature-title{
 
 }
-.wd-value{
-    
-    font-size: 20px;
+.temperature-input-container{
+
+}
+.temperature-input{
+    padding: 10px 3px;
+    border-radius: 1rem;
+    padding-left: 1rem;
+    font-size: 1rem;
+    background: rgb(32, 43, 59);
+    color: #ffffff;
+    border-style: solid;
+}
+.temperature-select-option{
+
+}
+.temperature-select{
+    height: 2rem;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    padding-left: 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+}
+.temperature-option{
+
+}
+.results{
+
+}
+.result-flex{
+    display: grid;
 }
